@@ -1,0 +1,25 @@
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  margin: 0%;
+  position: relative;
+  background-color: black;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.generalButton {
+  display: block;
+  margin: auto;
+  height: 50px;
+  width: 120px;
+  background-color: #D3C21B;
+  border: 2px solid black;
+  font-size: 20px;
+  &:hover {
+    box-shadow: 0 0 20px 3px rgba(138, 121, 138, 0.9) ;
+    cursor: pointer;
+  }
+}
