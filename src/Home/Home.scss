@@ -1,0 +1,23 @@
+.title {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.content {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  padding: 35px;
+
+  @media (min-width: 376px) {
+    padding: 80px;
+  }
+
+  @media (min-width: 769px) {
+    padding: 100px 180px 100px 180px;;
+  }
+}
+
+.logo {
+  width: 250px;
+}
