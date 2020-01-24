@@ -1,21 +1,39 @@
-.ratingPage {
+.container {
+  text-align: center
+}
+
+.comicTitle {
+  color: white;
+  font-size: 40px;
+  margin: 40px;
+  text-align: center;
+}
+
+.cntImage {
+  margin: auto;
+  position: relative;
+
   @media (min-width: 769px) {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 100%;
+    display: inline-block;
   }
 }
 
-.rateComic {
-  @media (min-width: 769px) {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
+.comicImage {
+  margin: auto;
+  display: block;
+  width: 90%;
+
+    @media (min-width: 769px) {
+      max-height: 500px;
+    }
 }
 
-.ratings {
-  @media (min-width: 769px) {
-    grid-row: 1/2;
-    grid-column: 2/3;
+.refreshIcon {
+  margin-top: 20px;
+  border: none;
+  background: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
   }
 }
