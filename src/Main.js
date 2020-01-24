@@ -3,11 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from './Home';
 import RatingPage from './RatingPage';
 import MainBackground from "./MainBackground";
+import Footer from './Footer'
 
 export default function Main() {
   return (
@@ -23,6 +23,7 @@ export default function Main() {
         </Route>
       </Switch>
     </Router>
+    <Footer />
     </div>
   )
 }

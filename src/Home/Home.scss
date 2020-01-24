@@ -21,3 +21,23 @@
 .logo {
   width: 250px;
 }
+
+.btn {
+  text-align: center;
+}
+
+.generalButton {
+  display: inline-block;
+  margin: auto;
+  width: 120px;
+  background-color: #D3C21B;
+  border: 2px solid black;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 15px 0;
+  &:hover {
+    box-shadow: 0 0 20px 3px rgba(138, 121, 138, 0.9) ;
+    cursor: pointer;
+  }
+}
