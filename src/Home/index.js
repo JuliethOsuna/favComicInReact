@@ -14,7 +14,6 @@ export default function Home(props) {
       <div className='btn'>
         <Link to='/rating-page' className='generalButton'>Comenzar</Link>
       </div>
-      <Footer />
     </div>
   )
 }
