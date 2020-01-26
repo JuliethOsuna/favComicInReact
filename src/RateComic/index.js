@@ -1,11 +1,11 @@
 import React from 'react';
 import './RateComic.scss';
-import mafaldaComic from '../assets/mafaldaComic.jpg';
+import { connect } from 'react-redux'
 import refresh from '../assets/refrescar.png';
 import Rating from '../Rating'
 import {getComic} from '../services/api';
 
-export default class RateComic extends React.Component {
+class RateComic extends React.Component {
 
   constructor(props) {
     super(props);
@@ -52,7 +52,7 @@ export default class RateComic extends React.Component {
         <img className='comicImage' src={this.state.comicImg} alt='' title={this.state.comicName}></img>
       </div>
       <div className='rateStars'>
-        <Rating />
+        <Rating comicName={this.state.comicName} comicImg={this.state.comicImg} comicId={this.state.comicId} rate={this.props.rate}/>
       </div>
       <button className='refreshIcon' onClick={() => this.refreshComic()}>
         <img src={refresh} alt='' title='Refrescar cómic'></img>
@@ -61,3 +61,25 @@ export default class RateComic extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (store) => {
+  return {store};
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    rate: (comic) => {
+      dispatch({
+        type: 'ADD',
+        payload: comic
+      })
+    },
+  }
+}
+
+const RateComicConnected = connect (
+  mapStateToProps,
+  mapDispatchToProps
+)(RateComic)
+
+export default RateComicConnected;
