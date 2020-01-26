@@ -23,6 +23,10 @@ export default class RateComic extends React.Component {
   }
 
   componentDidMount(){
+    this.showComic();
+  }
+
+  showComic(){
     const comicId = this.randomComicId()
 
     getComic(comicId).then(res => {
@@ -32,9 +36,12 @@ export default class RateComic extends React.Component {
         comicName: res.title,
         comicImg: res.img,
         comicId: res.num
-      })
+      });
+    });
+  }
 
-    })
+  refreshComic(){
+    this.showComic();
   }
 
   render(){
@@ -47,7 +54,7 @@ export default class RateComic extends React.Component {
       <div className='rateStars'>
         <Rating />
       </div>
-      <button className='refreshIcon'>
+      <button className='refreshIcon' onClick={() => this.refreshComic()}>
         <img src={refresh} alt='' title='Refrescar cómic'></img>
       </button>
     </div>
