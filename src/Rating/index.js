@@ -8,8 +8,8 @@ const starsArray = Array(5).fill(null);
 export default function Rating(props) {
   return(
     <div className='cntStars'>
-    {starsArray.map(() => (
-      <button className='btnStars'>
+    {starsArray.map((element, index) => (
+      <button className='btnStars' key={index}>
         <img className='stars' src={fillStar} alt=''></img>
       </button>
     ))}

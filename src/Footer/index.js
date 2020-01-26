@@ -3,8 +3,8 @@ import './Footer.scss';
 
 export default function Footer(props) {
   return(
-    <div class="footer">
-      <p class="developed">Developed by JuliethOsuna</p>
+    <div className="footer">
+      <p className="developed">Developed by JuliethOsuna</p>
     </div>
   )
 }
